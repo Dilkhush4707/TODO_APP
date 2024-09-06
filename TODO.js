@@ -1,20 +1,23 @@
 let todoList = [];
-displayItems();
 function addTodo() {
-  let todo_element = document.querySelector("#input");
-  let todo_item = todo_element.value;
+  let todo_date = document.querySelector("#input_date");
+  let todo_element = document.querySelector("#input_task");
+  let todo_item = todo_element.value || "invalid value delete";
   todoList.push(todo_item);
-  console.log(todoList);
-  todo_element.value = " ";
   displayItems();
+  todo_element.value = null;
 }
 function displayItems() {
-  let containerElement = document.querySelector("todo-container");
+  let containerElement = document.querySelector(".todo-container");
   let newHtml = "";
-  for (let i = 0; i < todoList.length; i++) {
+  let LENGTH = todoList.length;
+  for (let i = 0; i <= LENGTH - 1; i++) {
     newHtml += `
-    <div><p>${todoList[i]}</p>
-  <button>Delete</button></div>`;
+    <div class="todo_item_container">
+    <span>${todoList[i]}</span>
+    <button onclick="todoList.splice(${i},1);displayItems();">
+    Delete</button>
+  </div>`;
   }
   containerElement.innerHTML = newHtml;
 }

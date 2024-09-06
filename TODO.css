@@ -4,15 +4,22 @@ body {
   justify-content: center;
   align-items: center;
 }
+.maincontainer {
+  display: block;
+  justify-content: center;
+}
 .input-section {
   display: flex;
   flex: wrap;
   justify-content: center;
-  align-items: center;
 }
 #displayitems {
   color: black;
 }
 button {
   display: block;
+}
+.todo_item_container {
+  display: flex;
+  font-size: large;
 }
