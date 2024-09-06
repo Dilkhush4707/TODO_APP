@@ -4,22 +4,29 @@ body {
   justify-content: center;
   align-items: center;
 }
-.maincontainer {
-  display: block;
-  justify-content: center;
+#main-heading {
+  text-align: center;
 }
-.input-section {
-  display: flex;
-  flex: wrap;
-  justify-content: center;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 20px;
+  margin-top: 10px;
+  align-content: center;
 }
-#displayitems {
-  color: black;
+#input_task,
+#input_date {
+  font-size: 15px;
+  padding: 10px 5px;
 }
-button {
-  display: block;
+#addButton {
+  background-color: greenyellow;
+  border-radius: 5px;
 }
-.todo_item_container {
-  display: flex;
-  font-size: large;
+.del-button {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border-radius: 5px;
 }

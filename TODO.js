@@ -22,12 +22,12 @@ function displayItems() {
   for (let i = 0; i <= LENGTH - 1; i++) {
     let { item, duedate } = todoList[i];
     newHtml += `
-    <div class="todo_item_container">
+    
     <span>${item}</span>
     <span>${duedate}</span>
-    <button onclick="todoList.splice(${i},1);displayItems();">
+    <button class="del-button" onclick="todoList.splice(${i},1);displayItems();">
     Delete</button>
-  </div>`;
+  `;
   }
   containerElement.innerHTML = newHtml;
 }
